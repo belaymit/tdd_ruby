@@ -1,10 +1,13 @@
 class ProblemSolver
-  
   def fibonacci(num)
-    return  num  if num <= 1 
-    fibonacci( num - 1 ) + fibonacci( num - 2 )
+    if num.zero?
+       0
+    elsif num == 1
+      1
+    else
+    num.positive? ? fibonacci(num - 1) + fibonacci(num - 2) : 'Please enter a positive number'
+   end
   end
-
   def factorial(num)
     if num.zero?
       1
@@ -17,7 +20,7 @@ class ProblemSolver
     word.is_a?(String) ? word.reverse : 'Please enter a string'
   end
 
-  def fizzBuzz(num)
+  def fizzbuzz(num)
     if num.modulo(3).zero? && num.modulo(5).zero?
       'fizzbuzz'
     elsif num.modulo(3).zero?
@@ -29,3 +32,4 @@ class ProblemSolver
     end
   end
 end
+
