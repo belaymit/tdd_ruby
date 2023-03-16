@@ -1,13 +1,14 @@
 class ProblemSolver
   def fibonacci(num)
     if num.zero?
-       0
+      0
     elsif num == 1
       1
     else
-    num.positive? ? fibonacci(num - 1) + fibonacci(num - 2) : 'Please enter a positive number'
-   end
+      num.positive? ? fibonacci(num - 1) + fibonacci(num - 2) : 'Please enter a positive number'
+    end
   end
+
   def factorial(num)
     if num.zero?
       1
@@ -32,4 +33,3 @@ class ProblemSolver
     end
   end
 end
-
